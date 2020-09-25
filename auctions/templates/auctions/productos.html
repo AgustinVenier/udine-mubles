@@ -1,0 +1,28 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <div class="barra p-2">
+        <h2>Todos Los Productos</h2>
+        <ul class="category">
+            <li><a href="{% url 'productos' %}">Categorias</a>
+                <ul>
+                    {% for categoria in categorias %}
+                        <li><a href="{% url 'categoria' categoria %}">{{ categoria }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        {% for product in productos %}
+        <div class="card product" style="width: 18rem;">
+            <img src="{{ product.imagen_url }}" class="card-img-top" style="height: 350px;">
+            <div class="card-body">
+              <h5 class="card-title">{{ product.titulo }}</h5>
+              <p class="card-text">${{ product.precio }}</p>
+              <a href="{% url 'producto' product.id %}" class="btn btn-primary">Ver Producto</a>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "auctions/layout.html" %}
+
+
+
+{% block body %}
+    <div class="container">
+        <div class="nose">
+            <h1>¿Cómo Comprar?</h1>
+            <p>Si estas interesado en algunos de nuestros produtos no dudes en contactarnos, ya sea 
+            via <a href="https://wa.me/541163653669?text=Hola,%20estoy%20interesado%20en%20uno%20de%20tus%20productos.">WhatsApp</a>
+             o mail que te asesoraremos lo antes posible.</p>
+            <br>
+            <p style="border-top: 1px solid gray;">
+                <br>
+                A continuación, le dejamos un formulario el cual puede llenar y asi enviar un mail, en el cual debera especificar en cual es el producto que esta interesado. 
+                De ser posible dejenos algún numero así nostros nos contactamos con usted lo antes posible.
+            </p>
+        </div>
+        <br>
+        {% if message %}
+        <div>{{ message }}</div>
+        {% endif %}
+        <div class="mail">
+            <form action="" method="POST">{% csrf_token %}
+                <table>
+                    {{ form.as_table }}
+                </table>
+                <input type="submit" value="Enviar" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,168 @@
+body {
+    font-family: sans-serif;
+    color: black;
+    font-size: 1.3rem;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+.container {
+    width: 85%;
+    max-width: 850px;
+    margin:auto;
+}
+
+.header {
+    background-color: #A0522a;
+    color: #fff;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
+.navigation ul li a:hover {
+    background: #aaa;
+}
+
+.imagen {
+    width: 198px;
+    height: 198px;
+}
+
+.imagen-prds {
+    height: 400px;
+    width: 400px;
+}
+
+.barra {
+    background-color: gray;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 0;
+}
+
+.product {
+    width: 170px;
+    margin: auto;
+    display: inline-block;
+}
+
+.text-c {
+    text-align: center;
+    margin-left: 35px;
+}
+
+.boton-c {
+    margin-left: 15px;
+}
+
+.imagen-carru {
+    height: 500px;
+}
+
+.wpp {
+    float: right;
+    margin-right: 200px;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.category li a {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.category > li {
+    float:right;
+}
+
+.category li a:hover {
+    background-color: #434343;
+}
+
+.category li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+.category li:hover > ul {
+    display: block;
+}
+
+.category {
+    margin-top: none;
+    margin-right: 15px;
+
+}
+
+.social {
+    position: fixed;
+    left: 0;
+    top: 300px;
+    z-index: 2000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.social ul {
+   list-style: none; 
+}
+
+.social ul li a {
+    display: inline-block;
+    color: white;
+    background-color: #000;
+    padding: 10px 15px;
+    text-decoration: none;
+    -webkit-transition:all 500ms ease;
+    -o-transition:all  500ms ease;
+    transition:all 500ms ease;
+}
+
+.social ul li .icon-facebook {background-color: #3b5998;}
+.social ul li .icon-whatsapp {background-color: #228B22;}
+.social ul li .icon-instagram{background-color: #C13584;}
+
+.social ul li a:hover {
+    padding: 10px 30px;
+    background-color: #000;
+}

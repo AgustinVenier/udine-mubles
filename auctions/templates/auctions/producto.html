@@ -1,0 +1,23 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <div class="container">
+        <div style="padding: 100px 0;">
+            <h2>Producto: {{ producto.titulo }}</h2>
+            <div class="imagen-p">
+                <img src="{{ producto.imagen_url }}">
+            </div>
+            <div>
+                <p class="descripcion-p"><strong>Descripcion: </strong>{{ producto.descripcion }}</p>
+            </div>
+            <div>
+                <p class="precio-p"><strong>Precio: </strong>${{ producto.precio }}</p>
+            </div>
+            <div>
+                <p class="categoria-p"><strong>Categoria: </strong>{{ producto.categoria }}</p>
+
+                <a href="{% url 'comprar' %}" class="btn btn-success">Comprar</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
